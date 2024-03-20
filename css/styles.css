@@ -1,0 +1,198 @@
+/*
+ *  Reset styles
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+ *  Background
+ */
+body, 
+html {
+   height: 100%;
+}
+
+#bgRoot {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#bgImageBottom,
+#bgImageTop {
+    position: absolute;
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#bgImageTop {
+    z-index: 1;
+}
+
+#colorOpacity,
+#content {
+    position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#colorOpacity {
+    background:rgba(43,44,47,.4); 
+}
+
+/*
+ *  Timer
+ */
+#wrapTimer {
+    display: flex;
+    height: 100%;
+}
+
+#timer {
+    margin: auto;
+    padding: 25px 60px 40px 60px;
+}
+
+/*
+ *  Counters
+ */
+#hours {
+    width: 114px;
+}
+
+#minutes {
+    width: 224px;
+}
+
+#countersTimer {
+    display: flex;
+}
+
+#countersSeparator,
+.counter {
+    color: white;
+}
+
+#countersSeparator {
+    font-size: 145px;
+}
+
+.counter {
+    min-width: 110px;
+    height: 160px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+#countersSeparator.hide {
+    display: none;
+}
+
+.counter:focus {
+    outline: none;
+}
+
+.counter-width {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    min-width: 112px;
+    visibility: hidden;
+}
+
+.counter-width,
+.counter {
+    font-size: 200px;
+}
+
+.counter-width,
+.counter {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+ *  Controls 
+ */
+#controlTimer {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif; 
+    font-size: 23px;
+    color: white;
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+
+#controlTimer span {
+    cursor: pointer;
+}
+
+#timer:hover #controlTimer {
+    opacity: 1;
+}
+
+#pause,
+#play {
+    display: none;
+}
+
+#pause.active,
+#play.active {
+    display: block;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/Josefin-Sans/JosefinSans-Regular.ttf')  format('truetype'),
+         url('../fonts/Josefin-Sans/JosefinSans-Regular.woff2') format('woff2'), 
+         url('../fonts/Josefin-Sans/JosefinSans-Regular.woff') format('woff')
+}
+
